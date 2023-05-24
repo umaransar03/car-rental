@@ -1,7 +1,8 @@
 import { Container, Box, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
 import { Navbar } from '../Navbar/Navbar'
-import Image from '../../images/car.png'
+import carImage from '../../images/car.png'
+import bgImage from '../../images/bg.png'
 import './Landing.css';
 import styled from '@emotion/styled';
 
@@ -17,7 +18,7 @@ export const Landing = () => {
     return (
         <div>
             <Navbar />
-            <Container maxWidth='xl' sx={{ backgroundColor: 'white' }}>
+            <Container maxWidth='xl' sx={{ backgroundColor: 'white', }}>
                 <Box
                     sx={{
                         width: '100%',
@@ -25,20 +26,30 @@ export const Landing = () => {
                         display: 'flex',
                         alignItems: 'center',
                         position: 'relative',
-
+                        justifyContent: {
+                            xs: 'center', md: 'left'
+                        }
                     }}>
+                        <img className="bg-image" src={bgImage} alt="bg-shape" />
                     <Box fullWidth
+                        component='div'
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            maxWidth: '35rem',
+                            maxWidth: {
+                                xs: '35rem',
+                                md: '30rem'
+                            },
                             mt: 2,
                             zIndex: 3,
+                            textAlign: 'center',
+                            alignItems: 'center'
                         }}>
                         <Typography variant='h5' component='h1'
                             sx={{
                                 fontFamily: 'Rubik',
-                                fontWeight: 500
+                                fontWeight: 500,
+                                fontSize: 28,
                             }}>
                             Plan your trip now
                         </Typography>
@@ -52,7 +63,7 @@ export const Landing = () => {
                             }}>
                             Save <span style={{ color: '#c3073f' }}>big</span> with our car rental
                         </Typography>
-                        <Typography variant='subtitle1' component='p'
+                        <Typography variant='p' component='p'
                             sx={{
                                 color: 'grey',
                                 fontFamily: 'Rubik',
@@ -63,12 +74,12 @@ export const Landing = () => {
                             Rent the car of your dreams. Unbeatable prices,
                             unlimited miles, flexible pick-up options and much more.
                         </Typography>
-                        <Stack direction='row' spacing={2}>
+                        <Stack component='div' direction='row' spacing={2}>
                             <StyledButton variant='contained' size='large'>Book Ride</StyledButton>
                             <StyledButton variant='contained' color='secondary'
                                 sx={{
                                     ':hover': {
-                                        bgcolor: 'transparent', 
+                                        bgcolor: 'transparent',
                                         color: 'black',
                                         borderColor: 'black',
                                         border: 2
@@ -78,7 +89,7 @@ export const Landing = () => {
                             </StyledButton>
                         </Stack>
                     </Box>
-                    <img className='mainCar' src={Image} alt='car' />
+                    <img className='mainCar' src={carImage} alt='car' />
                 </Box>
 
             </Container>

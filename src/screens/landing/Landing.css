@@ -5,7 +5,17 @@
     width: 65%;
     margin-top: 5rem;
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         display: none;
     }
 }
+.bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }

@@ -41,7 +41,7 @@ export const Navbar = () => {
 
     return (
         <div>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' }}} />
+            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
             <CssBaseline />
             <AppBar
                 component='nav'
@@ -57,7 +57,7 @@ export const Navbar = () => {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ display: { md: 'none' }}}
+                            sx={{ display: { md: 'none' }, px: 1.5}}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -78,12 +78,11 @@ export const Navbar = () => {
                             </Button>
                         </Box>
                     </Box>
-                    <Typography variant='h5' component='h1' color='inherit' noWrap
+                    <Typography variant='h5' component='h1' color='primary' noWrap
                         sx={{
                             display: { xs: 'none', md: 'block' },
                             flexGrow: 1,
                             fontFamily: "Rubik",
-                            color: '#c3073f',
                             cursor: 'pointer'
                         }} >
                         <span style={{ fontWeight: 700, }}>Car</span>Rental
@@ -122,7 +121,7 @@ export const Navbar = () => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: {md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
