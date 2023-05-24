@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import { Landing } from './screens/landing/Landing';
 
 function App() {
   return (
     <div>
-      
+      <Landing/>
     </div>
   );
 }
