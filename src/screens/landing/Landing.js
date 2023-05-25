@@ -1,4 +1,4 @@
-import { Container, Box, Typography, Button, Stack } from '@mui/material'
+import { Container, Box, Typography, Button, Stack, Paper, TextField } from '@mui/material'
 import React from 'react'
 import { Navbar } from '../Navbar/Navbar'
 import carImage from '../../images/car.png'
@@ -75,15 +75,16 @@ export const Landing = () => {
                             unlimited miles, flexible pick-up options and much more.
                         </Typography>
                         <Stack component='div' direction='row' spacing={2}>
-                            <StyledButton variant='contained' size='large'>Book Ride</StyledButton>
+                            <StyledButton variant='contained' size='large' sx={{fontWeight: 700}}>Book Ride</StyledButton>
                             <StyledButton variant='contained' color='secondary'
                                 sx={{
                                     ':hover': {
                                         bgcolor: 'transparent',
                                         color: 'black',
                                         borderColor: 'black',
-                                        border: 2
-                                    }
+                                        border: 2,
+                                    },
+                                    fontWeight: 700
                                 }} >
                                 Learn More
                             </StyledButton>
@@ -91,6 +92,9 @@ export const Landing = () => {
                     </Box>
                     <img className='mainCar' src={carImage} alt='car' />
                 </Box>
+                <Paper elevation={5} sx={{zIndex: 2, position:'absolute'}}>
+                    
+                </Paper>
 
             </Container>
         </div>

@@ -65,14 +65,14 @@ export const Navbar = () => {
                             <Button
                                 color='primary'
                                 variant='button'
-                                sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f' }}
+                                sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f', fontWeight: 700 }}
                             >
                                 Sign In
                             </Button>
                             <Button
                                 color='primary'
                                 variant='contained'
-                                sx={{ my: 1, mx: 1, fontFamily: 'Rubik' }}
+                                sx={{ my: 1, mx: 1, fontFamily: 'Rubik', fontWeight: 700 }}
                             >
                                 Register
                             </Button>
@@ -90,7 +90,7 @@ export const Navbar = () => {
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, my: 1, mx: 1, fontFamily: 'Rubik' }}>
                         <Box sx={{ my: 1 }}>
                             {navItems.map((item) => (
-                                <Button key={item} sx={{ color: '#000000' }}>
+                                <Button key={item} sx={{ color: '#000000', fontWeight: 700 }}>
                                     {item}
                                 </Button>
                             ))}
@@ -98,14 +98,14 @@ export const Navbar = () => {
                         <Button
                             color='primary'
                             variant='button'
-                            sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f' }}
+                            sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f', fontWeight: 700 }}
                         >
                             Sign In
                         </Button>
                         <Button
                             color='primary'
                             variant='contained'
-                            sx={{ my: 1, mx: 1, fontFamily: 'Rubik' }}
+                            sx={{ my: 1, mx: 1, fontFamily: 'Rubik', fontWeight: 700 }}
                         >
                             Register
                         </Button>
