@@ -1,10 +1,11 @@
-import { Container, Box, Typography, Button, Stack, Paper, TextField } from '@mui/material'
+import { Container, Box, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
 import { Navbar } from '../Navbar/Navbar'
 import carImage from '../../images/car.png'
 import bgImage from '../../images/bg.png'
 import './Landing.css';
 import styled from '@emotion/styled';
+import { BookCar } from '../bookCar/bookCar'
 
 
 export const Landing = () => {
@@ -18,7 +19,7 @@ export const Landing = () => {
     return (
         <div>
             <Navbar />
-            <Container maxWidth='xl' sx={{ backgroundColor: 'white', }}>
+            <Container maxWidth='xl' sx={{ backgroundColor: '', }}>
                 <Box
                     sx={{
                         width: '100%',
@@ -30,8 +31,8 @@ export const Landing = () => {
                             xs: 'center', md: 'left'
                         }
                     }}>
-                        <img className="bg-image" src={bgImage} alt="bg-shape" />
-                    <Box fullWidth
+                    <img className="bg-image" src={bgImage} alt="bg-shape" />
+                    <Box
                         component='div'
                         sx={{
                             display: 'flex',
@@ -43,7 +44,7 @@ export const Landing = () => {
                             mt: 2,
                             zIndex: 3,
                             textAlign: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
                         }}>
                         <Typography variant='h5' component='h1'
                             sx={{
@@ -75,7 +76,7 @@ export const Landing = () => {
                             unlimited miles, flexible pick-up options and much more.
                         </Typography>
                         <Stack component='div' direction='row' spacing={2}>
-                            <StyledButton variant='contained' size='large' sx={{fontWeight: 700}}>Book Ride</StyledButton>
+                            <StyledButton variant='contained' size='large' sx={{ fontWeight: 700 }}>Book Ride</StyledButton>
                             <StyledButton variant='contained' color='secondary'
                                 sx={{
                                     ':hover': {
@@ -92,10 +93,9 @@ export const Landing = () => {
                     </Box>
                     <img className='mainCar' src={carImage} alt='car' />
                 </Box>
-                <Paper elevation={5} sx={{zIndex: 2, position:'absolute'}}>
-                    
-                </Paper>
-
+                <Box sx={{zIndex: 2, position: 'relative', width: '100%'}}>
+                    <BookCar />
+                </Box>
             </Container>
         </div>
     )
