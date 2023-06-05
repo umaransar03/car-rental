@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography, FormControl, InputLabel, MenuItem, Select, Paper, Grid, Button } from '@mui/material'
 import styled from '@emotion/styled';
-import { DatePicker, TimePicker } from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
@@ -125,7 +125,7 @@ export const BookCar = () => {
                                 Drop-of<span style={{ color: '#c3073f' }}> *</span>
                             </Typography>
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <TimePicker sx={{ width: '100%' }} />
+                                <DatePicker sx={{ width: '100%' }} />
                             </LocalizationProvider>
                         </Grid>
                         <Grid xs={12} md={3.5} sx={{ m: { md: 2, lg: 3}, width: '100%', bgcolor: '', pt: 5.5 }}>

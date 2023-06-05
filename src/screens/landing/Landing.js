@@ -6,6 +6,9 @@ import bgImage from '../../images/bg.png'
 import './Landing.css';
 import styled from '@emotion/styled';
 import { BookCar } from '../bookCar/bookCar'
+import { Trip } from '../trip/trip'
+import { Banner } from '../banner/Banner'
+import { Choose } from '../choose/Choose'
 
 
 export const Landing = () => {
@@ -96,7 +99,10 @@ export const Landing = () => {
                 <Box sx={{zIndex: 2, position: 'relative', width: '100%'}}>
                     <BookCar />
                 </Box>
+                <Trip/>
             </Container>
+            <Banner/>
+            <Choose/>
         </div>
     )
 }
