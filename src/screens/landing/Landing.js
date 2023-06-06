@@ -9,6 +9,7 @@ import { BookCar } from '../bookCar/bookCar'
 import { Trip } from '../trip/trip'
 import { Banner } from '../banner/Banner'
 import { Choose } from '../choose/Choose'
+import { Testimonials } from './Testimonials/Testimonials'
 
 
 export const Landing = () => {
@@ -103,6 +104,7 @@ export const Landing = () => {
             </Container>
             <Banner/>
             <Choose/>
+            <Testimonials/>
         </div>
     )
 }

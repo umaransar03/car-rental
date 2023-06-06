@@ -5,10 +5,17 @@ import React from 'react'
 export const Choose = () => {
     return (
         <div>
-            <Container maxWidth='lg' sx={{ bgcolor: 'yellowgreen' }}>
-                <Box sx={{ display: 'flex', p: 5}}>
-                    <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', }}>
-                        <Box sx={{ bgcolor: 'ButtonShadow'}}>
+            <Container maxWidth='lg'>
+                <Box sx={{ display: 'flex', p: 5, justifyContent: 'center', alignItems: 'center' }}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: { xs: 'column', lg: 'row' },
+                            textAlign: { xs: 'center', lg: 'left' },
+                            width: { xs: 'auto', md: '70%', lg: '100%' },
+                            p: { xs: 0, md: 10, lg: 0 }
+                        }}>
+                        <Box sx={{ width: '100%', }}>
                             <Typography variant='h5' component='h1'
                                 sx={{
                                     fontFamily: 'Rubik',
@@ -21,8 +28,9 @@ export const Choose = () => {
                             <Typography variant='h3' component='h1'
                                 sx={{
                                     fontFamily: 'Rubik',
-                                    fontWeight: 600,
-                                    width: '75%'
+                                    fontWeight: 700,
+                                    fontSize: 45,
+                                    // width: '75%'
                                 }}>
                                 Best valued deals you will ever find
                             </Typography>
@@ -33,7 +41,7 @@ export const Choose = () => {
                                     fontWeight: 400,
                                     lineHeight: 1.6,
                                     my: 4,
-                                    width: '70%'
+                                    // width: '70%'
                                 }} >
                                 Discover the best deals you'll ever find with our unbeatable offers.
                                 We're dedicated to providing you with the best value for your money,
@@ -46,15 +54,16 @@ export const Choose = () => {
                                     fontFamily: 'Rubik',
                                     fontWeight: '700',
                                     borderRadius: 1,
-                                    // height: '18%',
+                                    height: '14%',
+                                    fontSize: '15px'
                                 }} >
                                 Find Details
                             </Button>
                         </Box>
-                        <Box sx={{bgcolor: 'yellow',width: '100%', mr: 5,}}>
-                            <Box sx={{ display: 'flex', bgcolor: 'blue' }}>
-                                <DirectionsCar sx={{ fontSize: '100px' }} />
-                                <Box sx={{width: '100%', justifyContent: 'center', bgcolor: 'Background'}}>
+                        <Box sx={{ ml: { xs: 0, lg: 20 }, mt: {xs: 6, lg: 0}, }}>
+                            <Box sx={{ display: {xs: 'block', md: 'flex'}, bgcolor: '', mb: 4 }}>
+                                <DirectionsCar sx={{ fontSize: '100px', mr: 1.5, color: '#c3073f' }} />
+                                <Box sx={{ bgcolor: '' }}>
                                     <Typography variant='h3' component='h1'
                                         sx={{
                                             fontFamily: 'Rubik',
@@ -76,9 +85,9 @@ export const Choose = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-                            <Box sx={{ display: 'flex', }}>
-                                <MonetizationOn sx={{ fontSize: '100px' }} />
-                                <Box sx={{width: '100%'}}>
+                            <Box sx={{ display: {xs: 'block', md: 'flex'}, mb: 4 }}>
+                                <MonetizationOn sx={{ fontSize:'100px', mr: 1.5, color: '#c3073f' }} />
+                                <Box>
                                     <Typography variant='h3' component='h1'
                                         sx={{
                                             fontFamily: 'Rubik',
@@ -100,15 +109,15 @@ export const Choose = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-                            <Box sx={{ display: 'flex' }}>
-                                <CurrencyExchange sx={{ fontSize: '100px' }} />
-                                <Box sx={{width: '100%'}}>
+                            <Box sx={{ display: {xs: 'block', md: 'flex'} }}>
+                                <CurrencyExchange sx={{ fontSize: '95px', mr: 1.5, color: '#c3073f' }} />
+                                <Box>
                                     <Typography variant='h3' component='h1'
                                         sx={{
                                             fontFamily: 'Rubik',
                                             fontWeight: 700,
                                             fontSize: 25,
-                                            bgcolor: 'blueviolet'
+                                            bgcolor: ''
                                         }}
                                     >
                                         No Hidden Charges
@@ -119,7 +128,7 @@ export const Choose = () => {
                                             fontFamily: 'Rubik',
                                             fontWeight: 400,
                                             lineHeight: 1.6,
-                                            bgcolor: 'ButtonHighlight'
+                                            bgcolor: ''
                                         }} >
                                         Enjoy peace of mind with our no hidden charges policy.
                                         We believe in transparent and honest pricing.
