@@ -5,7 +5,7 @@ import React from 'react'
 export const Choose = () => {
     return (
         <div>
-            <Container maxWidth='lg'>
+            <Container maxWidth='lg' sx={{mb: 15}}>
                 <Box sx={{ display: 'flex', p: 5, justifyContent: 'center', alignItems: 'center' }}>
                     <Box
                         sx={{
@@ -49,19 +49,20 @@ export const Choose = () => {
                                 Our deals are designed to give you the ultimate renting experience,
                                 so don't miss out on your chance to save big.
                             </Typography>
-                            <Button variant='contained' size='large'
+                            <Button variant='contained' size='large' 
                                 sx={{
                                     fontFamily: 'Rubik',
                                     fontWeight: '700',
                                     borderRadius: 1,
                                     height: '14%',
-                                    fontSize: '15px'
+                                    fontSize: '15px',
+                                    boxShadow: '2px 2px 15px #f85183'
                                 }} >
                                 Find Details
                             </Button>
                         </Box>
                         <Box sx={{ ml: { xs: 0, lg: 20 }, mt: {xs: 6, lg: 0}, }}>
-                            <Box sx={{ display: {xs: 'block', md: 'flex'}, bgcolor: '', mb: 4 }}>
+                            <Box sx={{ display: {xs: 'block', md: 'flex'}, bgcolor: '', mb: 6 }}>
                                 <DirectionsCar sx={{ fontSize: '100px', mr: 1.5, color: '#c3073f' }} />
                                 <Box sx={{ bgcolor: '' }}>
                                     <Typography variant='h3' component='h1'
@@ -85,7 +86,7 @@ export const Choose = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-                            <Box sx={{ display: {xs: 'block', md: 'flex'}, mb: 4 }}>
+                            <Box sx={{ display: {xs: 'block', md: 'flex'}, mb: 6 }}>
                                 <MonetizationOn sx={{ fontSize:'100px', mr: 1.5, color: '#c3073f' }} />
                                 <Box>
                                     <Typography variant='h3' component='h1'

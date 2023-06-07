@@ -16,7 +16,7 @@ export const BookCar = () => {
     return (
         <div>
             <Container maxWidth='xl' sx={{ bgcolor: '', p: 2, }}>
-                <Paper elevation={5} sx={{ p: 2.5, backgroundColor: 'rgba(255, 0, 0, 0)', }}>
+                <Paper elevation={15} sx={{ p: 2.5,}}>
                     <Typography variant='h4' component='h4'
                         sx={{
                             fontFamily: 'Rubik',

@@ -28,7 +28,7 @@ export const Banner = () => {
                     Top Airports. Local Suppliers. <span style={{ color: '#c3073f' }}>24/7</span> Support.
                 </Typography>
             </Container>
-            <Box sx={{m: '5rem'}}>
+            <Box sx={{m: '5rem',}}>
                 <img src={banner} alt='banner' style={{width: '100%', height: '100%'}} />
             </Box>
         </div>

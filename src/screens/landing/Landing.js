@@ -9,7 +9,10 @@ import { BookCar } from '../bookCar/bookCar'
 import { Trip } from '../trip/trip'
 import { Banner } from '../banner/Banner'
 import { Choose } from '../choose/Choose'
-import { Testimonials } from './Testimonials/Testimonials'
+import { Testimonials } from '../Testimonials/Testimonials'
+import { DownloadApp } from '../downloadApp/DownloadApp'
+import { Footer } from '../footer/Footer'
+
 
 
 export const Landing = () => {
@@ -23,7 +26,7 @@ export const Landing = () => {
     return (
         <div>
             <Navbar />
-            <Container maxWidth='xl' sx={{ backgroundColor: '', }}>
+            <Container maxWidth='xl'>
                 <Box
                     sx={{
                         width: '100%',
@@ -80,7 +83,7 @@ export const Landing = () => {
                             unlimited miles, flexible pick-up options and much more.
                         </Typography>
                         <Stack component='div' direction='row' spacing={2}>
-                            <StyledButton variant='contained' size='large' sx={{ fontWeight: 700 }}>Book Ride</StyledButton>
+                            <StyledButton variant='contained' size='large' sx={{ fontWeight: 700, }}>Book Ride</StyledButton>
                             <StyledButton variant='contained' color='secondary'
                                 sx={{
                                     ':hover': {
@@ -105,6 +108,8 @@ export const Landing = () => {
             <Banner/>
             <Choose/>
             <Testimonials/>
+            <DownloadApp/>
+            <Footer/>
         </div>
     )
 }
