@@ -142,7 +142,7 @@ const Dialogue = (props) => {
                         <Typography variant='h5' sx={{ fontSize: 20, mb: 2, mt: {xs: 5, md: 0}, fontFamily: 'Rubik', fontWeight: 500 }}>
                             Car-<span style={{ color: '#c3073f', fontWeight: 700 }}>{props.carType}</span>
                         </Typography>
-                            {props.imgUrl && <img src={props.imgUrl} alt="car_img" style={{width:'100%', padding: '3rem'}} />}
+                            {props.imgUrl && <img src={props.imgUrl} alt="car_img" style={{width:'100%'}} />}
                     </Box>
                 </Box>
                 <DialogContentText sx={{ p: 5 }}>
