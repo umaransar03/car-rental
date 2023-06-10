@@ -1,9 +1,6 @@
 import { React, useState } from 'react'
-import { Container, Typography, FormControl, InputLabel, MenuItem, Select, Paper, Grid, Button, TextField } from '@mui/material'
+import { Container, Typography, FormControl, InputLabel, MenuItem, Select, Paper, Grid, Button } from '@mui/material'
 import styled from '@emotion/styled';
-import { DatePicker } from '@mui/x-date-pickers';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import Dialogue from '../Dialog';
 import CarAudi from '../../images/audi.jpg'
 import CarGolf from '../../images/golf.jpg'
@@ -11,17 +8,18 @@ import CarToyota from '../../images/camry.jpg'
 import CarBmw from '../../images/bmw.jpg'
 import CarMercedes from '../../images/benz.jpg'
 import CarPassat from '../../images/vw.jpg'
+import { useGeneralContext } from '../Context/GeneralContext';
+import './bookCar.css';
 
 export const BookCar = () => {
 
+    const { pickTime, setPickTime, dropTime, setDropTime } = useGeneralContext();
 
     // bookCar 
     const [carType, setCarType] = useState("");
     const [carImg, setCarImg] = useState("");
     const [pickUp, setPickUp] = useState("");
     const [dropOff, setDropOff] = useState("");
-    const [pickTime, setPickTime] = useState(new Date())
-    const [dropTime, setDropTime] = useState (new Date())
 
     const handleCar = (e) => {
         setCarType(e.target.value);
@@ -36,11 +34,11 @@ export const BookCar = () => {
     };
 
     const handlePickTime = (e) => {
-        setPickTime(e);
+        setPickTime(e.target.value);
     };
 
     const handleDropTime = (e) => {
-        setDropTime(e);
+        setDropTime(e.target.value);
     };
 
 
@@ -184,47 +182,53 @@ export const BookCar = () => {
                             >
                                 Pick-up<span style={{ color: '#c3073f' }}> *</span>
                             </Typography>
-                            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <DatePicker value={pickTime} renderInput={(params) => <TextField {...params} />} onChange={handlePickTime} sx={{ width: '100%' }} />
-                            </LocalizationProvider>
-                        </Grid>
-                        <Grid xs={12} md={3.5} sx={{ m: { md: 2, lg: 3 }, width: '100%', }}>
-                            <Typography variant='h5' component='h5'
-                                sx={{
-                                    fontFamily: 'Rubik',
-                                    fontSize: 16,
-                                    fontWeight: 500,
-                                    my: 1.5
-                                }}
-                            >
-                                Drop-of<span style={{ color: '#c3073f' }}> *</span>
-                            </Typography>
-                            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <DatePicker value={dropTime} renderInput={(params) => <TextField {...params} />} onChange={handleDropTime} sx={{ width: '100%' }} />
-                            </LocalizationProvider>
-                        </Grid>
-                        <Grid xs={12} md={3.5} sx={{ m: { md: 2, lg: 3 }, width: '100%', bgcolor: '', pt: 5.5 }}>
-
-                            <StyledButton fullWidth variant='contained' size='large'
-                                sx={{ fontWeight: 700, fontSize: 18 }}
-                                onClick={handleClickOpen}
-                            >
-                                Book Ride
-                            </StyledButton>
-                            <Dialogue
-                                open={open}
-                                handleClose={handleClose}
-                                imgUrl={imgUrl}
-                                carType={carType}
-                                pickUp={pickUp}
-                                pickTime={pickTime}
-                                dropOff={dropOff}
-                                dropTime={dropTime}
-                            />
-                        </Grid>
+                            <input
+                                className='carTime'
+                                id="picktime"
+                                value={pickTime}
+                                onChange={handlePickTime}
+                                type="date"                            
+                            ></input>
                     </Grid>
-                </Paper>
-            </Container>
-        </div>
+                    <Grid xs={12} md={3.5} sx={{ m: { md: 2, lg: 3 }, width: '100%', }}>
+                        <Typography variant='h5' component='h5'
+                            sx={{
+                                fontFamily: 'Rubik',
+                                fontSize: 16,
+                                fontWeight: 500,
+                                my: 1.5
+                            }}
+                        >
+                            Drop-of<span style={{ color: '#c3073f' }}> *</span>
+                        </Typography>
+                        <input
+                            className='carTime'
+                            id="droptime"
+                            value={dropTime}
+                            onChange={handleDropTime}
+                            type="date"
+                        ></input>
+                    </Grid>
+                    <Grid xs={12} md={3.5} sx={{ m: { md: 2, lg: 3 }, width: '100%', bgcolor: '', pt: 5.5 }}>
+
+                        <StyledButton fullWidth variant='contained' size='large'
+                            sx={{ fontWeight: 700, fontSize: 18 }}
+                            onClick={handleClickOpen}
+                        >
+                            Book Ride
+                        </StyledButton>
+                        <Dialogue
+                            open={open}
+                            handleClose={handleClose}
+                            imgUrl={imgUrl}
+                            carType={carType}
+                            pickUp={pickUp}
+                            dropOff={dropOff}
+                        />
+                    </Grid>
+                </Grid>
+            </Paper>
+        </Container>
+        </div >
     )
 }

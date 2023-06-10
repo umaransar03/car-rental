@@ -1655,16 +1655,16 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@mui/base@^5.0.0-alpha.87":
-  version "5.0.0-beta.3"
-  resolved "https://registry.npmjs.org/@mui/base/-/base-5.0.0-beta.3.tgz"
-  integrity sha512-ErOMoGNpgf6BF5W+jgXDiRlXJnpSeg8XSRonuY5UCCMHIlOWtKDtt/LS3qDAbFFGb7tV/y6EBddbcMeexx+zHw==
+"@mui/base@^5.0.0-alpha.87", "@mui/base@5.0.0-beta.4":
+  version "5.0.0-beta.4"
+  resolved "https://registry.npmjs.org/@mui/base/-/base-5.0.0-beta.4.tgz"
+  integrity sha512-ejhtqYJpjDgHGEljjMBQWZ22yEK0OzIXNa7toJmmXsP4TT3W7xVy8bTJ0TniPDf+JNjrsgfgiFTDGdlEhV1E+g==
   dependencies:
     "@babel/runtime" "^7.21.0"
     "@emotion/is-prop-valid" "^1.2.1"
     "@mui/types" "^7.2.4"
     "@mui/utils" "^5.13.1"
-    "@popperjs/core" "^2.11.7"
+    "@popperjs/core" "^2.11.8"
     clsx "^1.2.1"
     prop-types "^15.8.1"
     react-is "^18.2.0"
@@ -1694,6 +1694,20 @@
   integrity sha512-oKkx9z9Kwg40NtcIajF9uOXhxiyTZrrm9nmIJ4UjkU2IdHpd4QVLbCc/5hZN/y0C6qzi2Zlxyr9TGddQx2vx2A==
   dependencies:
     "@babel/runtime" "^7.21.0"
+
+"@mui/lab@^5.0.0-alpha.133":
+  version "5.0.0-alpha.133"
+  resolved "https://registry.npmjs.org/@mui/lab/-/lab-5.0.0-alpha.133.tgz"
+  integrity sha512-pPL5/f6si8eCXlsnOZrO+/zg5Yv6qKa9OpI6nGP77Mpn7iYHm9qrcsWFIBs6YjgxqJf6dA2IqtHaSNOSndrXDw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+    "@mui/base" "5.0.0-beta.4"
+    "@mui/system" "^5.13.2"
+    "@mui/types" "^7.2.4"
+    "@mui/utils" "^5.13.1"
+    clsx "^1.2.1"
+    prop-types "^15.8.1"
+    react-is "^18.2.0"
 
 "@mui/material@^5.0.0", "@mui/material@^5.13.2", "@mui/material@^5.8.6":
   version "5.13.2"
@@ -1817,10 +1831,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@popperjs/core@^2.11.7":
-  version "2.11.7"
-  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.7.tgz"
-  integrity sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==
+"@popperjs/core@^2.11.7", "@popperjs/core@^2.11.8":
+  version "2.11.8"
+  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
+  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -3815,6 +3829,13 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+date-fns@^2.25.0, date-fns@^2.30.0:
+  version "2.30.0"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.30.0.tgz"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
 
 dayjs@^1.10.7, dayjs@^1.11.7:
   version "1.11.7"

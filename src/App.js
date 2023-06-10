@@ -1,9 +1,12 @@
+import { CartProvider } from './screens/Context/GeneralContext';
 import { Landing } from './screens/landing/Landing';
 
 function App() {
   return (
     <div>
-      <Landing/>
+      <CartProvider>
+          <Landing />
+      </CartProvider>
     </div>
   );
 }

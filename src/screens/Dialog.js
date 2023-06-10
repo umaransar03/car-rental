@@ -1,12 +1,15 @@
-import { Button, Dialog, DialogActions, DialogContentText, DialogTitle, Box } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContentText, DialogTitle, Box, Divider } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Close, Info, LocationCity, LocationOn } from '@mui/icons-material';
+import { useGeneralContext } from './Context/GeneralContext';
 
 const Dialogue = (props) => {
+
+    const { pickTime, dropTime } = useGeneralContext();
 
     return (
         <div>
@@ -46,19 +49,21 @@ const Dialogue = (props) => {
                         </Typography>
                     </Box>
                 </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 3 }}>
+                <Divider/>
+                <Box sx={{ display: {xs: 'block', md: 'flex'}, mt: 3, textAlign: {xs: 'center', md: 'left'}, justifyContent: 'space-between', px: 3 }}>
                     <Box>
                         <Typography variant='h5' color={'primary'}
                             sx={{
                                 fontSize: 20,
                                 fontFamily: 'Rubik',
                                 fontWeight: 700,
+                                mb: 2
                             }}
                         >
                             Location & Date
                         </Typography>
-                        <Box sx={{ mb: 2 }}>
-                            <Box sx={{ display: 'flex', mb: 0.8 }}>
+                        <Box sx={{ mb: 2}}>
+                            <Box sx={{ display: 'flex', mb: 0.8, justifyContent: {xs: 'center', md: 'left'}  }}>
                                 <LocationOn sx={{ fontSize: 18, mt: 0.4 }} />
                                 <Typography variant='h6' sx={{ fontSize: 16, fontFamily: 'Rubik', fontWeight: 600 }}>
                                     Pick-Up Date & Time
@@ -72,12 +77,12 @@ const Dialogue = (props) => {
                                     fontWeight: 600,
                                     p: 2.3
                                 }}>
-                                {props.pickTime} /{" "}
+                                {pickTime} /{" "}
                                 <input type="time" className="input-time"></input>
                             </Typography>
                         </Box>
                         <Box sx={{ mb: 2 }}>
-                            <Box sx={{ display: 'flex', mb: 0.8 }}>
+                            <Box sx={{ display: 'flex', mb: 0.8, justifyContent: {xs: 'center', md: 'left'} }}>
                                 <LocationOn sx={{ fontSize: 18, mt: 0.4 }} />
                                 <Typography variant='h6' sx={{ fontSize: 16, fontFamily: 'Rubik', fontWeight: 600 }}>
                                     Drop-Off Date & Time
@@ -91,12 +96,12 @@ const Dialogue = (props) => {
                                     fontWeight: 600,
                                     p: 2.3
                                 }}>
-                                {props.dropTime} /{" "}
+                                {dropTime} /{" "}
                                 <input type="time" className="input-time"></input>
                             </Typography>
                         </Box>
                         <Box sx={{ mb: 2 }}>
-                            <Box sx={{ display: 'flex', mb: 0.8 }}>
+                            <Box sx={{ display: 'flex', mb: 0.8, justifyContent: {xs: 'center', md: 'left'} }}>
                                 <LocationCity sx={{ fontSize: 20, mt: 0.4 }} />
                                 <Typography variant='h6' sx={{ fontSize: 16, fontFamily: 'Rubik', fontWeight: 600 }}>
                                     Pick-Up Location
@@ -114,7 +119,7 @@ const Dialogue = (props) => {
                             </Typography>
                         </Box>
                         <Box sx={{ bgcolor: '' }}>
-                            <Box sx={{ display: 'flex', mb: 0.8 }}>
+                            <Box sx={{ display: 'flex', mb: 0.8, justifyContent: {xs: 'center', md: 'left'} }}>
                                 <LocationCity sx={{ fontSize: 20, mt: 0.4 }} />
                                 <Typography variant='h6' sx={{ fontSize: 16, fontFamily: 'Rubik', fontWeight: 600 }}>
                                     Drop-Off Location
@@ -132,15 +137,16 @@ const Dialogue = (props) => {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{textAlign: 'center'}}>
-                        <Typography variant='h5' sx={{ fontSize: 20, fontFamily: 'Rubik', fontWeight: 500 }}>
+                    <Divider sx={{display: {xs: 'block', md: 'none'}, mt: {xs: 3, md: 0}}} />
+                    <Box sx={{ textAlign: 'center' }}>
+                        <Typography variant='h5' sx={{ fontSize: 20, mb: 2, mt: {xs: 5, md: 0}, fontFamily: 'Rubik', fontWeight: 500 }}>
                             Car-<span style={{ color: '#c3073f', fontWeight: 700 }}>{props.carType}</span>
                         </Typography>
-                        {props.imgUrl && <img src={props.imgUrl} alt="car_img" />}
+                            {props.imgUrl && <img src={props.imgUrl} alt="car_img" />}
                     </Box>
                 </Box>
                 <DialogContentText sx={{ p: 5 }}>
-                    <Typography variant="h6" gutterBottom>
+                    <Typography variant="h6" gutterBottom color={'primary'}>
                         Personal Information
                     </Typography>
                     <Grid container spacing={3}>

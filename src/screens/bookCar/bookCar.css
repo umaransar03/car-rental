@@ -1,0 +1,12 @@
+.carTime {
+    width: 100%;
+    outline: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 16.5px 10px 16.5px 14px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+}
+.carTime:hover{
+    border: 1px solid #000000;
+}
