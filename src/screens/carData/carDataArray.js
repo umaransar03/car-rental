@@ -1,0 +1,81 @@
+import Golf6 from '../../images/golf.jpg'
+import AudiA1 from '../../images/audi.jpg'
+import Toyota from '../../images/camry.jpg'
+import Bmw320 from '../../images/bmw.jpg'
+import Benz from '../../images/benz.jpg'
+import Passat from '../../images/vw.jpg'
+
+export const CarDataArray = [
+    {
+      name: "VW Golf 6",
+      price: "37",
+      imageSrc: Golf6,
+      Model: "Golf 6",
+      Mark: "Volkswagen",
+      Year: "2008",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Manual",
+      Fuel: "Diesel",
+    },
+    {
+      name: "Audi A1 S-Line",
+      price: "45",
+      imageSrc: AudiA1,
+      Model: "Audi",
+      Mark: "A1",
+      Year: "2012",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Manual",
+      Fuel: "Gasoline",
+    },
+    {
+      name: "Toyota Camry",
+      price: "30",
+      imageSrc: Toyota,
+      Model: "Camry",
+      Mark: "Toyota",
+      Year: "2006",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Automatic",
+      Fuel: "Hybrid",
+    },
+    {
+      name: "BMW 320 ModernLine",
+      price: "35",
+      imageSrc: Bmw320,
+      Model: "320",
+      Mark: "BMW",
+      Year: "2012",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Manual",
+      Fuel: "Diesel",
+    },
+    {
+      name: "Mercedes-Benz GLK",
+      price: "50",
+      imageSrc: Benz,
+      Model: "Benz GLK",
+      Mark: "Mercedes",
+      Year: "2006",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Manual",
+      Fuel: "Diesel",
+    },
+    {
+      name: "VW Passat CC",
+      price: "25",
+      imageSrc: Passat,
+      Model: "Passat CC",
+      Mark: "Volkswagen",
+      Year: "2008",
+      Doors: "4/5",
+      AC: "Yes",
+      Transmission: "Automatic",
+      Fuel: "Gasoline",
+    },
+];

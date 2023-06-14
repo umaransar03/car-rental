@@ -7,6 +7,7 @@ import { Testimonials } from '../Testimonials/Testimonials'
 import { DownloadApp } from '../downloadApp/DownloadApp'
 import { Footer } from '../footer/Footer'
 import { Navbar } from '../Navbar/Navbar'
+import { CarData } from '../carData/carData'
 
 export const Home = () => {
     return (
@@ -14,6 +15,7 @@ export const Home = () => {
             <Navbar/>
             <Landing />
             <Trip />
+            <CarData/>
             <Banner />
             <Choose />
             <Testimonials />
