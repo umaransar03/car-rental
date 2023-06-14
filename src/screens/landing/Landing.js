@@ -21,6 +21,7 @@ export const Landing = () => {
     return (
         <div>
             <Container maxWidth='xl'>
+                <img className="bg-image" src={bgImage} alt="bg-shape" />
                 <Box
                     sx={{
                         width: '100%',
@@ -32,7 +33,6 @@ export const Landing = () => {
                             xs: 'center', md: 'left'
                         }
                     }}>
-                    <img className="bg-image" src={bgImage} alt="bg-shape" />
                     <Box
                         component='div'
                         sx={{
