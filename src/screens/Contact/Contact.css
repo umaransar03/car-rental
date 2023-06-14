@@ -1,0 +1,26 @@
+.textArea {
+    border: 1px solid #c4c4c4;
+    background: none;
+    height: 18rem;
+    padding: 19px 30px 19px 30px;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+
+.textArea:hover {
+    border: 1px solid black
+}
+
+.bg-image {
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
