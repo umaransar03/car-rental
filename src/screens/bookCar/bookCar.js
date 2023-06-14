@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import { Container, Typography, FormControl, InputLabel, MenuItem, Select, Paper, Grid, Button } from '@mui/material'
 import styled from '@emotion/styled';
-import Dialogue from '../Dialog';
+import Dialogue from '../Dialog/Dialog';
 import CarAudi from '../../images/audi.jpg'
 import CarGolf from '../../images/golf.jpg'
 import CarToyota from '../../images/camry.jpg'

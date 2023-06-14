@@ -1,18 +1,11 @@
 import { Container, Box, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
-import { Navbar } from '../Navbar/Navbar'
 import carImage from '../../images/car.png'
 import bgImage from '../../images/bg.png'
 import './Landing.css';
 import styled from '@emotion/styled';
 import { BookCar } from '../bookCar/bookCar'
-import { Trip } from '../trip/trip'
-import { Banner } from '../banner/Banner'
-import { Choose } from '../choose/Choose'
-import { Testimonials } from '../Testimonials/Testimonials'
-import { DownloadApp } from '../downloadApp/DownloadApp'
-import { Footer } from '../footer/Footer'
-
+import { useGeneralContext } from '../Context/GeneralContext';
 
 
 export const Landing = () => {
@@ -22,10 +15,11 @@ export const Landing = () => {
         height: 50
     }))
 
+    const { handleAbout } = useGeneralContext();
+
 
     return (
         <div>
-            <Navbar />
             <Container maxWidth='xl'>
                 <Box
                     sx={{
@@ -84,7 +78,7 @@ export const Landing = () => {
                         </Typography>
                         <Stack component='div' direction='row' spacing={2}>
                             <StyledButton variant='contained' size='large' sx={{ fontWeight: 700, }}>Book Ride</StyledButton>
-                            <StyledButton variant='contained' color='secondary'
+                            <StyledButton variant='contained' color='secondary' onClick={handleAbout}
                                 sx={{
                                     ':hover': {
                                         bgcolor: 'transparent',
@@ -100,16 +94,10 @@ export const Landing = () => {
                     </Box>
                     <img className='mainCar' src={carImage} alt='car' />
                 </Box>
-                <Box sx={{zIndex: 2, position: 'relative', width: '100%'}}>
+                <Box sx={{ zIndex: 2, position: 'relative', width: '100%' }}>
                     <BookCar />
                 </Box>
-                <Trip/>
             </Container>
-            <Banner/>
-            <Choose/>
-            <Testimonials/>
-            <DownloadApp/>
-            <Footer/>
         </div>
     )
 }

@@ -14,7 +14,7 @@ export const About = () => {
         <div>
             <Navbar />
             <Container maxWidth='lg' sx={{ mb: 10, textAlign: { xs: 'center', md: 'left' } }} >
-            <img className="bg-image" src={bgImage} alt="bg-shape" />
+            <img className="about" src={bgImage} alt="bg-shape" />
                 <Box sx={{ pt: 16 }}>
                     <Typography varinat='h4' color='primary'
                         sx={{
@@ -23,7 +23,7 @@ export const About = () => {
                             fontSize: 42
                         }}
                     >
-                        Testimonials
+                        About
                     </Typography>
                     <Typography varinat='h4' color='primary'
                         sx={{
@@ -31,7 +31,7 @@ export const About = () => {
                             fontSize: 18
                         }}
                     >
-                        Home / Testimonials
+                        Home / About
                     </Typography>
                 </Box>
                 <Box sx={{

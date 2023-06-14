@@ -12,7 +12,7 @@ export const Contact = () => {
         <div>
             <Navbar />
             <Container maxWidth='lg' sx={{ mb: 10, textAlign: { xs: 'center', md: 'left' } }} >
-                <img className="bg-image" src={bgImage} alt="bg-shape" />
+                <img className="contact" src={bgImage} alt="bg-shape" />
                 <Box sx={{ pt: 16 }}>
                     <Typography varinat='h4' color='primary'
                         sx={{

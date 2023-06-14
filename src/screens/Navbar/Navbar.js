@@ -1,36 +1,22 @@
 import React from 'react'
-import { AppBar, GlobalStyles, CssBaseline, Toolbar, Typography, Button, Divider, Link } from '@mui/material'
+import { AppBar, GlobalStyles, CssBaseline, Toolbar, Typography, Button } from '@mui/material'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useNavigate } from 'react-router-dom';
+import { useGeneralContext } from '../Context/GeneralContext';
+import { MobileNav } from './MobileNav';
 
 export const Navbar = () => {
 
+    const {
+        handleContact,
+        handleAbout,
+        handleHome,
+        handleTestimonials
+    } = useGeneralContext();
+
     const drawerWidth = 240;
-    const navItems = ['Home', 'Contact', 'Testimonials', 'About'];
-
-
-    const navigate = useNavigate();
-
-
-    const handleHome = () => {
-        navigate("/")
-    };
-    const handleContact = () => {
-        navigate("/contact")
-    };
-    const handleAbout = () => {
-        navigate("/about")
-    };
-    const handleTestimonials = () => {
-        navigate("/testimonials")
-    };
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -38,22 +24,8 @@ export const Navbar = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant='h5' component='h1' color='primary' noWrap sx={{ color: '#c3073f', my: 2 }}>
-                <span style={{ fontWeight: 700, }}>Car</span>Rental
-            </Typography>
-            <Divider />
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center', fontFamily: 'Rubik' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
+    const mobileNav = (
+        <MobileNav handleDrawerToggle={handleDrawerToggle} />
     );
 
 
@@ -96,7 +68,7 @@ export const Navbar = () => {
                             </Button>
                         </Box>
                     </Box>
-                    <Typography variant='h5' component='h1' color='primary' noWrap
+                    <Typography variant='h5' component='h1' color='primary' noWrap onClick={handleHome}
                         sx={{
                             display: { xs: 'none', md: 'block' },
                             flexGrow: 1,
@@ -108,19 +80,18 @@ export const Navbar = () => {
                     <nav>
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, my: 1, mx: 1, fontFamily: 'Rubik' }}>
                             <Box sx={{ my: 1, }}>
-                                <Link onClick={handleHome} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', mt: 1, fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                <Button onClick={handleHome} sx={{ color: '#000000', fontWeight: 700 }}>
                                     Home
-                                </Link>
-                                <Link onClick={handleContact} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                </Button>
+                                <Button onClick={handleContact} sx={{ color: '#000000', fontWeight: 700 }}>
                                     Contact
-                                </Link>
-                                <Link onClick={handleTestimonials} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                </Button>
+                                <Button onClick={handleTestimonials} sx={{ color: '#000000', fontWeight: 700 }}>
                                     Testimonials
-                                </Link>
-                                <Link onClick={handleAbout} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                </Button>
+                                <Button onClick={handleAbout} sx={{ color: '#000000', fontWeight: 700 }}>
                                     About
-                                </Link>
-                                
+                                </Button>
                             </Box>
                             <Button
                                 color='primary'
@@ -153,7 +124,7 @@ export const Navbar = () => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
-                    {drawer}
+                    {mobileNav}
                 </Drawer>
             </Box>
         </div>
