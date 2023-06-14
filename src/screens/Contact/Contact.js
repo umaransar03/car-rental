@@ -55,7 +55,7 @@ export const Contact = () => {
                                 fontFamily: 'Rubik',
                                 fontWeight: 500,
                                 lineHeight: 1.6,
-                                mb: '1rem'
+                                my: '1.5rem'
                             }} >
                             A multifaceted professional skilled in multiple fields of research,
                             development as well as a learning specialist. Over 15 years of experience.
