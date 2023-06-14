@@ -1,17 +1,25 @@
-// import { Contact } from './screens/Contact/Contact';
 import { About } from './screens/About/About';
+import { Contact } from './screens/Contact/Contact';
 import { CartProvider } from './screens/Context/GeneralContext';
-// import { TestimonialsPage } from './screens/TestimonialsPage/TestimonialsPage';
-// import { Landing } from './screens/landing/Landing';
+import { BrowserRouter as Route, Routes, Router } from 'react-router-dom';
+import { Landing } from './screens/landing/Landing';
+import { Testimonials } from './screens/Testimonials/Testimonials';
+
 
 function App() {
   return (
-    <div>
-      <CartProvider>
-          {/* <Landing /> */}
-          <About/>
-      </CartProvider>
-    </div>
+    <>
+      <Router>
+        <CartProvider>
+          <Routes>
+            <Route exact path="/" element={(<Landing />)} />
+            <Route exact path="/about" element={(<About />)} />
+            <Route exact path="/testimonials" element={(<Testimonials />)} />
+            <Route exact path="/contact" element={(<Contact />)} />
+          </Routes>
+        </CartProvider>
+      </Router>
+    </>
   );
 }
 

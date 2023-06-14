@@ -1,5 +1,4 @@
 import { createContext, useState, useContext } from "react";
-
 export const GeneralContext = createContext();
 export const useGeneralContext = () => useContext(GeneralContext);
 

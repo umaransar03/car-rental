@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, GlobalStyles, CssBaseline, Toolbar, Typography, Button, Divider, } from '@mui/material'
+import { AppBar, GlobalStyles, CssBaseline, Toolbar, Typography, Button, Divider, Link } from '@mui/material'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -8,11 +8,29 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-
-const drawerWidth = 240;
-const navItems = ['Home', 'Contact', 'Testimonials', 'About'];
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+    const drawerWidth = 240;
+    const navItems = ['Home', 'Contact', 'Testimonials', 'About'];
+
+
+    const navigate = useNavigate();
+
+
+    const handleHome = () => {
+        navigate("/")
+    };
+    const handleContact = () => {
+        navigate("/contact")
+    };
+    const handleAbout = () => {
+        navigate("/about")
+    };
+    const handleTestimonials = () => {
+        navigate("/testimonials")
+    };
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -22,7 +40,7 @@ export const Navbar = () => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant='h5' component='h1' color='primary' noWrap sx={{color: '#c3073f', my:2}}>
+            <Typography variant='h5' component='h1' color='primary' noWrap sx={{ color: '#c3073f', my: 2 }}>
                 <span style={{ fontWeight: 700, }}>Car</span>Rental
             </Typography>
             <Divider />
@@ -87,29 +105,39 @@ export const Navbar = () => {
                         }} >
                         <span style={{ fontWeight: 700, }}>Car</span>Rental
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, my: 1, mx: 1, fontFamily: 'Rubik' }}>
-                        <Box sx={{ my: 1 }}>
-                            {navItems.map((item) => (
-                                <Button key={item} sx={{ color: '#000000', fontWeight: 700 }}>
-                                    {item}
-                                </Button>
-                            ))}
+                    <nav>
+                        <Box sx={{ display: { xs: 'none', md: 'flex' }, my: 1, mx: 1, fontFamily: 'Rubik' }}>
+                            <Box sx={{ my: 1, }}>
+                                <Link onClick={handleHome} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', mt: 1, fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                    Home
+                                </Link>
+                                <Link onClick={handleContact} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                    Contact
+                                </Link>
+                                <Link onClick={handleTestimonials} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                    Testimonials
+                                </Link>
+                                <Link onClick={handleAbout} sx={{ textDecoration: 'none', mb: 1.5, fontFamily: 'Rubik', fontWeight: 700, color: 'black', ':hover': { color: '#c3073f', transition: '0.3s' }, cursor: 'pointer' }}>
+                                    About
+                                </Link>
+                                
+                            </Box>
+                            <Button
+                                color='primary'
+                                variant='button'
+                                sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f', fontWeight: 700 }}
+                            >
+                                Sign In
+                            </Button>
+                            <Button
+                                color='primary'
+                                variant='contained'
+                                sx={{ my: 1, mx: 1, fontFamily: 'Rubik', fontWeight: 700 }}
+                            >
+                                Register
+                            </Button>
                         </Box>
-                        <Button
-                            color='primary'
-                            variant='button'
-                            sx={{ my: 1, fontFamily: 'Rubik', color: '#c3073f', fontWeight: 700 }}
-                        >
-                            Sign In
-                        </Button>
-                        <Button
-                            color='primary'
-                            variant='contained'
-                            sx={{ my: 1, mx: 1, fontFamily: 'Rubik', fontWeight: 700 }}
-                        >
-                            Register
-                        </Button>
-                    </Box>
+                    </nav>
                 </Toolbar>
             </AppBar>
             <Box component="nav">
