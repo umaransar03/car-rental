@@ -1,12 +1,14 @@
 import { Container, Box, Typography, Card, CardContent, Avatar } from '@mui/material'
 import React from 'react'
+import avt1 from '../../images/4.png'
+import avt2 from '../../images/5.png'
 
 
 
-export const Testimonials = () => {
+export const Testimonials = (props) => {
     return (
         <div>
-            <Container maxWidth='xl' sx={{ bgcolor: '#f8f8f8' }}>
+            <Container maxWidth='xl' sx={{ bgcolor: props.white === 'white' ? 'none' : '#f8f8f8' }}>
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: 10 }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
                         <Box sx={{ width: {xs: 'auto', md: '60%'}, textAlign: 'center' }}>
@@ -51,7 +53,7 @@ export const Testimonials = () => {
                                         The booking was easy and the rental rates were very affordable.<span style={{color: '#c3073f'}}>"</span>
                                     </Typography>
                                     <Box sx={{display: 'flex', mt: 4}}>
-                                        <Avatar alt="umar" sx={{width: 70, height: 70}} src="https://scontent.fyyz1-2.fna.fbcdn.net/v/t39.30808-6/242245040_1296861967435595_7210301143699333647_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IaZGMnbDlEkAX9UWPGZ&_nc_ht=scontent.fyyz1-2.fna&oh=00_AfAoZYV8Da4F-CYyD75yt0n4CKprrQ3XnFm_wyHkiW9u0g&oe=6484B078" />
+                                        <Avatar alt="umar" sx={{width: 70, height: 70}} src={avt1} />
                                         <Box sx={{p: 1, ml: 1}}>
                                             <Typography variant='h6' sx={{ fontSize: 20, fontWeight: 700, fontFamily: 'Rubik', }} >Umar Ansar</Typography>
                                             <Typography variant='p' sx={{fontFamily: 'Rubik',}}>Mandi Bahauddin</Typography>
@@ -66,7 +68,7 @@ export const Testimonials = () => {
                                     Highly recommend for this car rental website!<span style={{color: '#c3073f'}}>"</span>
                                     </Typography>
                                     <Box sx={{display: 'flex', mt: 4}}>
-                                        <Avatar alt="umar" sx={{width: 70, height: 70}} src="https://scontent.fyyz1-2.fna.fbcdn.net/v/t39.30808-6/255068713_1338411013280690_9133035588010953798_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1wpKdj81mGsAX8Lyexl&_nc_ht=scontent.fyyz1-2.fna&oh=00_AfCLYBKpNBwoNKcrRJbgIrVZryqnmDuEplnA9J35sbcKsQ&oe=6483F1FA" />
+                                        <Avatar alt="umar" sx={{width: 70, height: 70}} src={avt2} />
                                         <Box sx={{ p: 1, ml: 1}}>
                                             <Typography variant='h6' sx={{ fontSize: 20, fontWeight: 700, fontFamily: 'Rubik', }} >Umar Ansar</Typography>
                                             <Typography variant='p' sx={{fontFamily: 'Rubik',}}>Islamabad</Typography>
