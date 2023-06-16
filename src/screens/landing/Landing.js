@@ -6,6 +6,7 @@ import './Landing.css';
 import styled from '@emotion/styled';
 import { BookCar } from '../bookCar/bookCar'
 import { useGeneralContext } from '../Context/GeneralContext';
+import { Link } from 'react-scroll';
 
 
 export const Landing = () => {
@@ -77,7 +78,9 @@ export const Landing = () => {
                             unlimited miles, flexible pick-up options and much more.
                         </Typography>
                         <Stack component='div' direction='row' spacing={2}>
-                            <StyledButton variant='contained' size='large' sx={{ fontWeight: 700, }}>Book Ride</StyledButton>
+                            <Link to="bookCarSection" smooth={true} duration={1000}>
+                                <StyledButton variant='contained' size='large' sx={{ fontWeight: 700, }}>Book Ride</StyledButton>
+                            </Link>
                             <StyledButton variant='contained' color='secondary' onClick={handleAbout}
                                 sx={{
                                     ':hover': {

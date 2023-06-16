@@ -36,7 +36,7 @@ export const Contact = () => {
                     sx={{
                         display: { xs: 'block', md: 'grid' },
                         gridTemplateColumns: '0.5fr 1fr',
-                        mt: { xs: 7, md: 14 },
+                        mt: { xs: 4, md: 14 },
                         p: { xs: 8, md: 0 },
                     }}>
                     <Box sx={{ pr: 0 }}>
@@ -44,7 +44,7 @@ export const Contact = () => {
                             sx={{
                                 fontFamily: 'Rubik',
                                 fontWeight: 700,
-                                fontSize: 42
+                                fontSize: {xs: 26, md: 42}
                             }}
                         >
                             Need additional information?

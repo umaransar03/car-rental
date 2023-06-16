@@ -1,8 +1,12 @@
 import { CurrencyExchange, DirectionsCar, MonetizationOn } from '@mui/icons-material'
 import { Box, Button, Container, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-scroll';
+
 
 export const Choose = () => {
+
+    
     return (
         <div>
             <Container maxWidth='lg' sx={{mb: 15}}>
@@ -49,6 +53,7 @@ export const Choose = () => {
                                 Our deals are designed to give you the ultimate renting experience,
                                 so don't miss out on your chance to save big.
                             </Typography>
+                            <Link to="detailsSection" smooth={true} duration={1000}>
                             <Button variant='contained' size='large' 
                                 sx={{
                                     fontFamily: 'Rubik',
@@ -60,6 +65,7 @@ export const Choose = () => {
                                 }} >
                                 Find Details
                             </Button>
+                            </Link>
                         </Box>
                         <Box sx={{ ml: { xs: 0, lg: 20 }, mt: {xs: 6, lg: 0}, }}>
                             <Box sx={{ display: {xs: 'block', md: 'flex'}, bgcolor: '', mb: 6 }}>

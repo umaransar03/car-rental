@@ -40,7 +40,7 @@ export const About = () => {
                     m: { xs: '4rem auto', md: '7rem auto' },
                     gap: 8
                 }}>
-                    <Box sx={{ width: '26rem', height: '26rem', m: { xs: '0 auto', md: 0 } }}>
+                    <Box sx={{ width: {xs: '100%', md: '26rem'}, height: '26rem', m: { xs: '0 auto', md: 0 } }}>
                         <img className="" src={about} alt="map" style={{ width: '100%' }} />
                     </Box>
                     <Box sx={{ width: { xs: 'auto', md: '45%' }, mt: { xs: 8, md: 0 } }}>
