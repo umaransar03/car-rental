@@ -6,7 +6,6 @@ import { TestimonialsPage } from './screens/TestimonialsPage/TestimonialsPage';
 import { Home } from './screens/Home/Home';
 
 
-
 function App() {
   return (
     <>
